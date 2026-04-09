@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD IKHLASHOTUL A'MALIYYAH! 🎂</title>
+    <style>
+        /* Import Font Bold & Estetik */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Pacifico&family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --primary: #ff6b6b;
+            --accent: #ffd93d;
+            --dark: #0f3460;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #1a1a2e, #16213e, #0f172a);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Background Animasi */
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            top: -10px;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Card Utama */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            animation: scaleUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes scaleUp {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Foto Profil Bold */
+        .profile-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 25px;
+        }
+
+        .photo-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            overflow: hidden;
+            box-shadow: 0 0 25px var(--primary);
+            background: #252545;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .name {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            background: linear-gradient(45deg, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .age {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 6rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 10px 0;
+            background: linear-gradient(to bottom, #fff 30%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 5px 15px rgba(255, 217, 61, 0.3));
+        }
+
+        .message {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+            margin: 20px 0;
+            padding: 0 15px;
+        }
+
+        /* Badge/Wishes */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Floating Button */
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: var(--accent);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            font-size: 1.5rem;
+        }
+
+        .playing {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 217, 61, 0.7);
+            }
+
+            70% {
+                transform: scale(1.1);
+                box-shadow: 0 0 0 15px rgba(255, 217, 61, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 217, 61, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="card">
+        <h1>Happy Birthday</h1>
+        <div class="name">Ikhlashotul A'maliyyah</div>
+
+        <div class="profile-container">
+            <div class="photo-frame">👩‍🎓</div>
+        </div>
+
+        <div class="age">22</div>
+        <p style="font-weight: 600; letter-spacing: 2px; color: var(--accent);">Level Unlocked!</p>
+
+        <p class="message">
+            "Semoga di usia ini, setiap langkahmu dimudahkan, doamu dikabulkan,
+            dan dikelilingi ketulusan. Teruslah bersinar dan menginspirasi!"
+        </p>
+
+        <div class="tags">
+            <span class="tag">🚀 Career Goal</span>
+            <span class="tag">🍎 Healthy Life</span>
+            <span class="tag">💰 Wealthy</span>
+            <span class="tag">🌈 Happiness</span>
+        </div>
+
+        <footer>✨ Team PKM PM — Road to PIMNAS ✨</footer>
+    </div>
+
+    <button class="music-control" id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+    <script>
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#ffd93d', '#6bcb77', '#4d96ff'];
+            const container = document.body;
+
+            for (let i = 0; i < 50; i++) {
+                const conf = document.createElement('div');
+                conf.className = 'confetti';
+                conf.style.left = Math.random() * 100 + 'vw';
+                conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                conf.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                conf.style.opacity = Math.random();
+                container.appendChild(conf);
+
+                setTimeout(() => conf.remove(), 5000);
+            }
+        }
+
+        const audio = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                btn.innerHTML = '🎵';
+                btn.classList.remove('playing');
+            } else {
+                audio.play();
+                btn.innerHTML = '🎶';
+                btn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        window.onload = () => {
+            createConfetti();
+            setInterval(createConfetti, 4000);
+        };
+    </script>
+</body>
+
+</html>
